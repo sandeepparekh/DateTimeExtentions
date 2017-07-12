@@ -8,10 +8,10 @@
     <owners>$author$</owners>
     <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
     <projectUrl>https://github.com/sandeepparekh/DateTimeExtentions</projectUrl>
-    <iconUrl></iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/sandeepparekh/DateTimeExtentions/master/Dte/DateTime.Extentions/dteicon.ico</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>DateTime Extention Methods</description>
-    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <releaseNotes>First Release</releaseNotes>
     <copyright>Copyright 2017</copyright>
     <tags>DateTime Extention Methods</tags>
   </metadata>
