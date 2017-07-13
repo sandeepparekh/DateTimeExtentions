@@ -28,5 +28,15 @@ namespace Dte
             return dateTime.AddSeconds(unixTimeStamp);
         }
 
+        public static bool IsLeapYear(this DateTime datetime)
+        {
+            if (datetime.Year % 4 != 0)
+                return false;
+            if (datetime.Year % 100 != 0)
+                return true;
+            if (datetime.Year % 400 != 0)
+                return false;
+            return true;
+        }
     }
 }

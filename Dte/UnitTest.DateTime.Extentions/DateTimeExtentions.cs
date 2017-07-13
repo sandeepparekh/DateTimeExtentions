@@ -34,5 +34,27 @@ namespace UnitTest.DateTime.Extentions
 
             Assert.AreEqual(3, d.AddUnixTimeStamp(86400).Day);
         }
+
+        [TestMethod]
+        public void IsLeapYear()
+        {
+            var d = new System.DateTime(1904,01,01);
+            Assert.AreEqual(true,d.IsLeapYear());
+
+            d = new System.DateTime(1948, 01, 01);
+            Assert.AreEqual(true, d.IsLeapYear());
+
+            d = new System.DateTime(1996, 01, 01);
+            Assert.AreEqual(true, d.IsLeapYear());
+
+            d = new System.DateTime(2004, 01, 01);
+            Assert.AreEqual(true, d.IsLeapYear());
+
+            d = new System.DateTime(2002, 01, 01);
+            Assert.AreEqual(false, d.IsLeapYear());
+
+            d = new System.DateTime(2018, 01, 01);
+            Assert.AreEqual(false, d.IsLeapYear());
+        }
     }
 }
