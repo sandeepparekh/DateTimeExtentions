@@ -11,7 +11,7 @@
     <iconUrl>https://raw.githubusercontent.com/sandeepparekh/DateTimeExtentions/master/Dte/DateTime.Extentions/dteicon.ico</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>DateTime Extention Methods</description>
-    <releaseNotes>LeapYear Function Added</releaseNotes>
+    <releaseNotes>Added GetWeekdays, GetWeekends, improved existing GetDaysOfWeek</releaseNotes>
     <copyright>Copyright 2017</copyright>
     <tags>DateTime ExtLention Methods</tags>
   </metadata>

@@ -22,9 +22,15 @@ namespace UnitTest.DateTime.Extentions
         {
             var fromDate = new System.DateTime(2017, 01, 2);
             var toDate = new System.DateTime(2017, 01, 8);
-            var mondays = fromDate.GetDaysOfWeek(toDate, DayOfWeek.Monday);
 
+            var mondays = fromDate.GetDaysOfWeek(toDate, DayOfWeek.Monday);
             Assert.AreEqual(1, mondays.Count);
+
+            var alldays = fromDate.GetDaysOfWeek(toDate);
+            Assert.AreEqual(7, alldays.Count);
+
+            alldays = fromDate.GetDaysOfWeek(toDate, DayOfWeek.Friday, DayOfWeek.Monday);
+            Assert.AreEqual(2, alldays.Count);
         }
 
         [TestMethod]
@@ -38,8 +44,8 @@ namespace UnitTest.DateTime.Extentions
         [TestMethod]
         public void IsLeapYear()
         {
-            var d = new System.DateTime(1904,01,01);
-            Assert.AreEqual(true,d.IsLeapYear());
+            var d = new System.DateTime(1904, 01, 01);
+            Assert.AreEqual(true, d.IsLeapYear());
 
             d = new System.DateTime(1948, 01, 01);
             Assert.AreEqual(true, d.IsLeapYear());
@@ -55,6 +61,25 @@ namespace UnitTest.DateTime.Extentions
 
             d = new System.DateTime(2018, 01, 01);
             Assert.AreEqual(false, d.IsLeapYear());
+        }
+
+        [TestMethod]
+        public void GetWeekdays()
+        {
+            var f = new System.DateTime(2017, 07, 10);
+            var t = new System.DateTime(2017, 07, 16);
+
+            Assert.AreEqual(5, f.GetWeekdays(t).Count);
+        }
+
+
+        [TestMethod]
+        public void GetWeekends()
+        {
+            var f = new System.DateTime(2017, 07, 10);
+            var t = new System.DateTime(2017, 07, 16);
+
+            Assert.AreEqual(2, f.GetWeekends(t).Count);
         }
     }
 }
